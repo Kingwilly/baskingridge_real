@@ -1,0 +1,27 @@
+Homescreen
+1. Food Type: How it should work?
+    - Bascially this is just going to be a drop down or selection that allows the user to pick what kind of food they prefer. 
+    - For the restaurant owner this would be a similar drop down that gives them the option of saying what kind of food they provide.
+2. Verification Screen: Could we do a call? We didn’t understand the simulation
+    - This is for the Business ID of the restaurant signing up for the service. The client wants to ensure that when they sign up that they are actual business. 
+    - This business ID would cross reference with an existing public database to ensure they are real businesses.
+3. What is the difference between the restaurant photos in the first step and the last one? (Sign Up Flow)
+    - None. It is redudan.t
+4. How we should fill “Special for the day”?
+    - This is a quick on the spot menu option that allows them to quickly add the main special of the day. This might be an already existing menu item or a new one that they add with a timed shutdown.
+Menu Builder
+1. Parent Menu should have a price?
+    - No, only the food items and the side options will have prices.
+2. Can you explain me the menu template?
+    - This is going to be selected from a list of differant templates they can choose from.
+    - It is like choosing a skin for a menu and a general theme of the layout
+Dashboard
+1. Upload wait time + progress time? (Not following)
+    - This is a on-the-spot form field where the restaurant can indicate what is their current wait time for food orders.
+2. How it should work the Cooking Portal?
+    - There will most likely be a printer that they will have in the back that will show all of the new orders. This will not be a UI/UX screen.
+3. Live View? 
+    - This indicates all of the current Dine & Dash users in the restaurant at that time or just entering at that time.
+Order Dispute
+1. Let’s talk about this flow as well.
+    - Both parties have this dispute page. It is basically just a private chat that the customer can then open up another chat with a Dine & Dash employee if they feel the restaurant will not resolve the issue.

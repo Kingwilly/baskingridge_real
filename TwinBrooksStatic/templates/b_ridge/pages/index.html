@@ -1,0 +1,166 @@
+{% extends './b_ridge/pages/base.html' %}
+{% block title %}Home{% endblock %}
+{% load staticfiles %} 
+{% block header %}
+<!-- image-header -->
+<div id="image-header" class="bar dark parallax-background index-header" style="padding-top: 250px;padding-bottom: 250px;">
+    <div class="container">
+        <div class="header-content">
+            <img src="{% static './b_ridge/images/logo-inline.png' %}" alt="" class="animated fadeInDown first logo">
+     
+        </div><!-- header-content -->
+    </div><!-- / container -->
+</div>
+<!-- / image-header -->
+
+
+
+
+{% endblock %}
+
+{% block frontend_content %}
+
+<section id="first-block">
+        <div class="container">
+            <div class="row space-top-30">
+                <div class="col-md-6 about-text-2   fadeInLeft second">
+                    <h2 class="text-primary">Our History</h2>
+              
+                    
+                    <p style="line-height: 24px">Basking Ridge Country Club Catering is open to the
+                            community and accessible for all types of events.
+                            Only 45 minutes from New York City and 30 minutes
+                            from Newark Airport, the Basking Ridge Country Club
+                            has the perfect blend of suburban tranquility and
+                            metropolitan sophistication. Our facility is
+                            contemporary & elegant, featuring raised hearth
+                            fireplaces, mirrored French doors, crystal chandeliers
+                            and customizable lighting. Newly renovated and under
+                             <a target="_blankl" href="http://deliciousheights.com/basking-ridge/">  Delicious Heights  </a>    management, let our unsurpassed
+                            service cater to your every need.</p>
+                </div><!-- / about-text-2 -->
+                <div class="col-md-6 about-slider   fadeInRight second">
+                    <div id="mini-slider" class="carousel slide" data-ride="carousel">
+                        <!-- wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <img src="{% static './b_ridge/images/Home/1.jpg' %}" alt="">
+                            </div>
+                            <div class="item ">
+                                <img src="{% static './b_ridge/images/Home/3.jpg' %}" alt="">
+                            </div>
+                         
+                            <div class="item ">
+                                <img src="{% static './b_ridge/images/Home/2.jpg' %}" alt="">
+                            </div>
+                            <div class="item ">
+                                <img src="{% static './b_ridge/images/Home/4.jpg' %}" alt="">
+                            </div>
+                            <div class="item ">
+                                <img src="{% static './b_ridge/images/Home/5.jpg' %}" alt="">
+                            </div>
+                            <div class="item ">
+                                <img src="{% static './b_ridge/images/Home/6.jpg' %}" alt="">
+                            </div>
+                            <div class="item ">
+                                <img src="{% static './b_ridge/images/Home/7.jpg' %}" alt="">
+                            </div>
+                            
+                        </div>
+                        <!-- / wrapper for slides -->
+                        <!-- controls -->
+                        <a class="left carousel-control" href="#mini-slider" role="button" data-slide="prev">
+                            <span class="fa fa-angle-left" aria-hidden="true"></span>
+                        </a>
+                        <a class="right carousel-control" href="#mini-slider" role="button" data-slide="next">
+                            <span class="fa fa-angle-right" aria-hidden="true"></span>
+                        </a>
+                        <!-- / controls -->
+                    </div><!-- / mini-slider -->
+                </div><!-- / about-slider -->
+            </div><!-- / row -->
+        </div><!-- / container -->
+    </section>
+    <!-- / about -->
+    <section id="about">
+        <div class="container">
+            <div class="row space-top-30">
+    
+                <div class="col-md-6 about-slider   fadeInRight second" style="padding-right: 30">
+                        <h2 class="text-primary">Virtual Tour</h2>
+                
+                        <div class="videoWrapper" >
+                                <iframe width="500" height="360" src="https://www.youtube.com/embed/QO001uvN4xg" frameborder="0" allowfullscreen=""></iframe>
+                        </div>
+                    
+                </div><!-- / about-slider -->
+   
+                <div class="col-md-6 about-slider   fadeInRight second" style="padding-left: 30">
+                    <h2 class="text-primary" style="font-size:  33px;">At A Glance</h2>
+                        <div class="videoWrapper">
+                            
+                                <iframe width="500" height="260" src=" http://banquetservicesusa.com/BaskingRidge/mobile/index.html#p=1" frameborder="0" allowfullscreen=""></iframe>
+                        </div>
+                    
+
+                        
+                </div><!-- / about-slider -->
+
+               
+            </div><!-- / row -->
+     
+<br><br>
+            <div class="row space-top-30">
+                
+                            <div class="col-md-6 about-slider   fadeInRight second" style="padding-right: 30">
+                                <h2 class="text-primary">What People Are Saying</h2>
+                            
+                                 <style>
+                                        .ww-reset img {
+                                            width: 150px;
+                                            margin: auto;
+                                        }
+                                     </style>  
+            <a href="http://bit.ly/NJBRCC" target="_blank"><script src="//www.weddingwire.com/assets/vendor/widgets/my-reviews.js" type="application/javascript"></script></a>
+            
+            <div id="ww-widget-reviews" class="ww-reset ww-reviews-widget">
+            <div class="ww-reviews-placeholder"><a href="http://bit.ly/NJBRCC" target="_blank">Read all of our wedding reviews on our storefront at</a>
+             <a href="http://bit.ly/NJBRCC" target="_blank">Basking Ridge Country Club Catering</a><a href="http://bit.ly/NJBRCC" target="_blank"><img src="//www.weddingwire.com/assets/widgets/logo/WWlogo-83x19.gif" alt="Wwlogo 83x19" />
+             </a></div>
+            </div>
+            
+            <script>// <![CDATA[
+            WeddingWire.createReview({"vendorId":"effa7bde7447659e", "id":"ww-widget-reviews" });
+            // ]]&gt;</script>		
+                                
+                            </div><!-- / about-slider -->
+               
+                            <div class="col-md-6 about-slider   fadeInRight second" style="padding-left: 30">
+                                    <h2 class="text-primary">News & Events</h2>
+                                    <div class="videoWrapper">
+                                        {% comment %} <p style="line-height: 24px">Winter Wedding Showcase! <br />
+                                            Saturday, January 6th <br />
+                                            Doors open at 12:00pm<br />
+                                           <b>FREE ADMISSION</b>  <br />
+                                            <a href="http://events.r20.constantcontact.com/register/event?oeidk=a07eeugy3h21ff763cb&llr=s6anhzn6&showPage=true" target="_blank">Register Today!</a> <br />   
+                                            Or call American Bridal Show at 908-371-0900  <br />
+                                            Live entertainment showcases, Food Sampling, Win an 8 day 7 night honeymoon and MORE! <br /> {% endcomment %}
+                                            {{news_entry.content|safe}}
+                                            
+                                    </div>
+                                
+            
+                                    
+                            </div><!-- / about-slider -->
+            
+                           
+                        </div><!-- / row -->
+
+
+</div>
+</div>
+
+        </div><!-- / container -->
+    </section>
+    <!-- / about -->
+{% endblock %}

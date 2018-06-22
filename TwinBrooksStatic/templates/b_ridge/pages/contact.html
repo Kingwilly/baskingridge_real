@@ -1,0 +1,185 @@
+{% extends './b_ridge/pages/base.html' %}
+{% load staticfiles %} 
+{% load crispy_forms_tags %}
+{% block title %}Contact{% endblock %}
+
+{% block header %}
+<div id="image-header" class="bar dark parallax-background vendor-header" style=" padding-top: 350px;padding-bottom: 350px; background: url('{% static './b_ridge/images/contact/main.jpg' %}') no-repeat center !important; margin-bottom: 20px;  background-position: center !important; background-size: cover !important; ">
+    <div class="container">
+        <div class="header-content">
+
+
+        </div>
+        <!-- header-content -->
+    </div>
+    <!-- / container -->
+</div>
+
+{% endblock %}
+
+{% block frontend_content %}
+<section id="about" style="padding-top: 30px;padding-bottom: 0px">
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 ">
+            <div class="row space-top-10">
+                <div class="col-md-12 about-text-2   fadeInLeft second">
+                    <h2 class="text-primary">Schedule a Tour!</h2>
+                    <div class="separator-line space-bottom text-left">&nbsp;</div>
+                    <p style="line-height: 24px">
+                            We’d love to hear from you. Please contact us to learn more about our services.
+                    </p>
+                    <br>
+                    <b style="line-height: 24px">Basking Ridge Country Club Catering <br>
+                            185 Madisonville Road, Basking Ridge, NJ 07920  <br> Tel: 908-953-8092</b>
+                    <br>
+                </div><!-- / about-text-2 -->
+            </div>
+            <br><br>
+           
+          
+        </div>
+        <div class="col-md-4" style="">
+                <div id="map">
+                    </div><!-- / google-maps -->
+        </div>
+        <!-- / panel -->
+
+<!-- / col-sm-12 -->
+</section>
+
+
+
+
+
+
+<!-- content -->
+<style>
+        .form-control {
+            color: #000 !important
+        }
+</style>
+<section id="contact">
+        
+    
+        <div class="container">
+     
+            <div id="contact-form" class=" fadeIn first">
+<br><br>
+                    <form  method="POST" enctype="multipart/form-data">{% csrf_token %}
+                        <div class="row">
+                            <div class="col s12">
+                                {{ form.name|as_crispy_field }}
+                            </div>
+                            <div class="col s12">
+                                {{ form.email|as_crispy_field }}
+                            </div>
+                            <div class="col s12">
+                                {{ form.phone_number|as_crispy_field }}
+                            </div>
+                            <div class="col s12">
+                                {{ form.event_type|as_crispy_field }}
+                            </div>
+                            <div class="col s12">
+                                {{ form.event_date|as_crispy_field }}
+                            </div>
+                            <div class="cols12">
+                                {{ form.body|as_crispy_field }}
+                            </div>
+                        </div> <!-- row -->
+                        <div class="row">
+                            <div class="col ">
+                                    <button type="submit" id="form-submit" class="btn btn-md btn-primary-filled btn-form-submit">SEND MESSAGE</button>
+                            </div>
+                         </div>
+             
+                         </form>
+                        
+                       
+            </div><!-- contact-form -->
+        </div><!-- / container -->
+        </section>
+        <br><br>
+        <div>
+                   <div class="row">
+            <div class="col-md-4" >
+                    <img src="{% static './b_ridge/images/contact/1.jpg' %}" class="img-responsive  " />
+            </div>
+            <div class="col-md-4">
+                    <img src="{% static './b_ridge/images/contact/2.jpg' %}" class="img-responsive  "  />
+            </div>
+            <div class="col-md-4">
+                    <img src="{% static './b_ridge/images/contact/3.jpg' %}" class="img-responsive  " />
+            </div>
+        </div><br><br>
+ 
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+
+{% block js %}
+<script>
+
+                {% for msg in messages %}
+                alert({{msg.message}})
+                {% endfor %}
+  
+
+    $(function () {
+        
+            function initMap() {
+        
+                var location = new google.maps.LatLng(40.7185012,  -74.5385065);
+        
+                var mapCanvas = document.getElementById('map');
+                var mapOptions = {
+                    center: location,
+                    zoom: 16,
+                    panControl: false,
+                    scrollwheel: false,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                }
+                var map = new google.maps.Map(mapCanvas, mapOptions);
+        
+                var markerImage = "{% static './b_ridge/images/marker.png' %}";
+        
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    icon: markerImage
+                });
+{% comment %}         
+                var contentString = '<div class="info-window">' +
+                        '<h3>Info Window Content</h3>' +
+                        '<div class="info-content">' +
+                        '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>' +
+                        '</div>' +
+                        '</div>'; {% endcomment %}
+                        var contentString =''
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString,
+                    maxWidth: 400
+                });
+        
+                marker.addListener('click', function () {
+                    infowindow.open(map, marker);
+                });
+        
+                var styles = [{"featureType": "landscape", "stylers": [{"saturation": -100}, {"lightness": 65}, {"visibility": "on"}]}, {"featureType": "poi", "stylers": [{"saturation": -100}, {"lightness": 51}, {"visibility": "simplified"}]}, {"featureType": "road.highway", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "road.arterial", "stylers": [{"saturation": -100}, {"lightness": 30}, {"visibility": "on"}]}, {"featureType": "road.local", "stylers": [{"saturation": -100}, {"lightness": 40}, {"visibility": "on"}]}, {"featureType": "transit", "stylers": [{"saturation": -100}, {"visibility": "simplified"}]}, {"featureType": "administrative.province", "stylers": [{"visibility": "off"}]}, {"featureType": "water", "elementType": "labels", "stylers": [{"visibility": "on"}, {"lightness": -25}, {"saturation": -100}]}, {"featureType": "water", "elementType": "geometry", "stylers": [{"hue": "#ffff00"}, {"lightness": -25}, {"saturation": -97}]}];
+        
+                map.set('styles', styles);
+        
+        
+            }
+        
+            google.maps.event.addDomListener(window, 'load', initMap);
+        });
+</script>
+
+{% endblock %}
