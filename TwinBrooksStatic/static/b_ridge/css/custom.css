@@ -11,8 +11,24 @@
     background-size: cover !important;
     background-position: center;
 }
+#signature-image {
+    background: url("../../signature.png") no-repeat center;
+    width: 60px;
+    height:60px;
+    display:inline-block;
+    background-size: cover !important;
+    background-position: center;
+}
+#nj-bride-image {
+    background: url("../../nj-bride-love-it.jpg") no-repeat center;
+    width: 60px;
+    height:60px;
+    display:inline-block;
+    background-size: cover !important;
+    background-position: center;
+}
 .vendor-header {
-        background-position: center !important;
+    background-position: center !important;
     background-size: cover !important;
 }
 .header-content h2 {
