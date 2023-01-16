@@ -15,7 +15,7 @@ Django==1.9.8
 django-admin-rangefilter==0.3.0
 django-admin-sortable2==0.6.18
 django-allauth==0.28.0
-django-anymail==0.6.1
+django-anymail==1.2.1
 django-appconf==1.0.2
 django-autofixture==0.12.1
 django-ckeditor==5.4.0
